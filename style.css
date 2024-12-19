@@ -11,6 +11,11 @@ body {
     font-weight: 400;
 }
 
+div {
+    unicode-bidi: isolate;
+}
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -64,6 +69,10 @@ section {
     display: block;
     max-width: 100%;
     transition: all 1s;
+}
+
+img {
+    overflow: clip;
 }
 
 .card-image:hover img {

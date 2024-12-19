@@ -44,7 +44,17 @@ const teamContainer = document.querySelector(".team-container");
 let listItems = "";
 for(let i = 0; i < teamMembers.length; i++) {
   const member = teamMembers[i];
-  listItems += ` <li>${member.name}</li>`; 
+  listItems += `
+   <div class="team-card">
+                <div class="card-image">
+                        <img src="img/male1.png" alt="Mario Bianchi">
+                    </div>
+                    <div class="card-text">
+                        <h3>Mario Bianchi</h3>
+                        <p>Designer</p>
+                    </div>
+                </div>
+  `; 
 }
 
-teamListElm.innerHTML = listItems;
+teamContainer.innerHTML = listItems;
