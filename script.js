@@ -36,3 +36,15 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+//  DOM ELEMENTS
+const teamListElm = document.getElementById("team-list");
+const teamContainer = document.querySelector(".team-container");
+
+let listItems = "";
+for(let i = 0; i < teamMembers.length; i++) {
+  const member = teamMembers[i];
+  listItems += ` <li>${member.name}</li>`; 
+}
+
+teamListElm.innerHTML = listItems;

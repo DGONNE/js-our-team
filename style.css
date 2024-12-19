@@ -82,10 +82,14 @@ section {
     font-weight: 400;
 }
 
+/* FORM */
 .form-container {
     max-width: 480px;
     margin: auto;
 }
+
+
+
 
 label {
     margin-bottom: 0.25em;
