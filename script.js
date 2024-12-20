@@ -85,10 +85,15 @@ memberFormElm.addEventListener("submit", function(event) {
   const role = roleElm.value;
   const img = imgElm.value;
 
-  teamMembers.push({
+  const newMember = {
     name,
     role,
     img
-  });
+  };
+
+  teamMembers.push(newMember);
+  const card = createCardMember(newMember);
+
+  teamContainer.innerHTML += card;
 
 })
