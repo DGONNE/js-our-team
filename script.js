@@ -61,12 +61,34 @@ const teamMembers = [
 ];
 
 //  DOM ELEMENTS
-const teamListElm = document.getElementById("team-list");
 const teamContainer = document.querySelector(".team-container");
+const memberFormElm = document.getElementById("member-form");
+const nameElm = document.getElementById("name");
+const roleElm = document.getElementById("role");
+const imageElm = document.getElementById("image");
 
+
+// ON PAGE LOAD
 let listItems = "";
 for(let i = 0; i < teamMembers.length; i++) {
 listItems += createCardMember(teamMembers[i]);
 }
 
 teamContainer.innerHTML = listItems;
+
+
+// DOM EVENTS
+memberFormElm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = nameElm.value;
+  const role = roleElm.value;
+  const image = imageElm.value;
+
+  teamMembers.push({
+    name,
+    role,
+    image
+  });
+  
+})
