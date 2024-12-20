@@ -65,7 +65,7 @@ const teamContainer = document.querySelector(".team-container");
 const memberFormElm = document.getElementById("member-form");
 const nameElm = document.getElementById("name");
 const roleElm = document.getElementById("role");
-const imageElm = document.getElementById("image");
+const imgElm = document.getElementById("img");
 
 
 // ON PAGE LOAD
@@ -83,12 +83,12 @@ memberFormElm.addEventListener("submit", function(event) {
 
   const name = nameElm.value;
   const role = roleElm.value;
-  const image = imageElm.value;
+  const img = imgElm.value;
 
   teamMembers.push({
     name,
     role,
-    image
+    img
   });
-  
+
 })
