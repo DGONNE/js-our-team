@@ -43,15 +43,16 @@ const teamContainer = document.querySelector(".team-container");
 
 let listItems = "";
 for(let i = 0; i < teamMembers.length; i++) {
-  const member = teamMembers[i];
+  const {name, role, img} = teamMembers[i];
+
   listItems += `
    <div class="team-card">
                 <div class="card-image">
-                        <img src="img/${member.img}" alt="Mario Bianchi">
+                        <img src="img/${img}" alt="${name}">
                     </div>
                     <div class="card-text">
-                        <h3>${member.name}</h3>
-                        <p>${member.role}</p>
+                        <h3>${name}</h3>
+                        <p>${role}</p>
                     </div>
                 </div>
   `; 
